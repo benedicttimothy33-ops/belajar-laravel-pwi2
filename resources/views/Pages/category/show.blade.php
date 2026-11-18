@@ -23,10 +23,9 @@
             <tbody>
                 @forelse ($kategori as $item)
                 <tr>
-                    <th scope="row">{{($kategori->perPage() * ($kategori->currentPage()-1)) +
-                        $loop->iteration}}</th>
-                    <td>Nama Kategori</td>
-                    <td>Deskripsi Kategori</td>
+                    <th scope="row">{{($kategori->perPage() * ($kategori->currentPage()-1)) + $loop->iteration}}</th>
+                    <td>{{$item->category_name}}</td>
+                    <td>{{$item->description}}</td>
                     <td>
                         <button type="button" class="btn btn-warning">Edit</button>
                         <button type="button" class="btn btn-danger">Hapus</button>
